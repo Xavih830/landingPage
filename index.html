@@ -25,7 +25,7 @@
           </svg>
         </button>
       </section>
-      <div id="agregar-lateral" class="flex flex-col items-start mt-3 gap-2">
+      <div id="agregar-lateral" class="flex flex-col items-start mt-3 gap-2 sm:hidden">
       </div>
       <div class="hidden sm:flex sm:flex-row sm:m-0">
         <button class="text-gray-600 hover:bg-gray-200 w-full px-2 rounded hover:text-gray-900">Inicio</button>
@@ -38,7 +38,7 @@
     </nav>
   </header>
 
-  <section class="bg-center bg-no-repeat bg-[url('images/transporte.jpg')] bg-dark bg-blend-multiply">
+  <section class="bg-center bg-no-repeat bg-[url('images/transporte.jpg')] bg-cover bg-dark bg-blend-multiply">
     <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
       <h1 class="mb-6 text-4xl font-bold tracking-tighter text-white md:text-5xl lg:text-6xl">Constituye tu Compañía de
         Transporte y Obtén tu Permiso de Operaciones en 30 Días — Sin Trámites Complicados</h1>
@@ -62,27 +62,46 @@
     </div>
   </section>
 
-  <main>
-    <div class="bg-neutral-primary-soft block max-w-sm border border-default rounded-base shadow-xs">
-      <a href="#">
+  <main id="ventaja_competitiva">
+    <div class="bg-white pr-10 pl-10 pt-7 pb-9 sm:p-16 lg:p-20 rounded-2xl">
+      <h2 class="text-center text-[#1B2B45] text-3xl font-bold tracking-tight text-heading md:text-4xl lg:text-5xl">¿Por
+        qué somos tu <mark class="px-2 pb-0.5 text-white bg-[#1B2B45] rounded"> mejor opción</mark> ?</h2>
+    </div>
+    <div id="beneficios" class="block sm:flex">
+      <div class="bg-neutral-primary-soft block max-w-sm border border-default rounded-base shadow-xs">
         <img class="rounded-t-base" src="images/transporte.jpg" alt="" />
-      </a>
-      <div class="p-6 text-center">
-        <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">Ahorra meses de trámites y evita rechazos</h5>
-        <a href="#"
-          class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
-          Read more
-          <svg class="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-            width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M19 12H5m14 0-4 4m4-4-4-4" />
-          </svg>
-        </a>
+        <div class="p-6 text-center">
+          <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">Ahorra meses de trámites y evita
+            rechazos</h5>
+          <button
+            class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+            Read more
+            <svg class="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 12H5m14 0-4 4m4-4-4-4" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="bg-neutral-primary-soft block max-w-sm border border-default rounded-base shadow-xs">
+        <img class="rounded-t-base" src="images/transporte.jpg" alt="" />
+        <div class="p-6 text-center">
+          <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">Ahorra meses de trámites y evita
+            rechazos</h5>
+          <button
+            class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+            Read more
+            <svg class="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 12H5m14 0-4 4m4-4-4-4" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-
   </main>
-
   <script src="src/main.js" type="module"></script>
 </body>
 

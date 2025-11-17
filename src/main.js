@@ -32,8 +32,8 @@ const cargarBeneficios = () => {
   card.innerHTML = "";
   listaBeneficios.forEach(cadenas => {
     card.innerHTML += `
-      <div class="bg-gray-900 m-1 block max-w-sm sm:max-w-150 border border-2 rounded-xl shadow-xs">
-        <img class="w-full h-55 sm:w-88 rounded-xl" src="${cadenas.dos}" alt="" />
+      <div class="bg-gray-900 m-1 block max-w-sm sm:max-w-[365px] lg:max-w-[245px] border border-2 rounded-xl shadow-xs">
+        <img class="w-full h-55 sm:w-100 sm:h-50 lg:w-75 lg:h-34 rounded-xl" src="${cadenas.dos}" alt="" />
         <div class="p-6 text-center">
           <h5 class="mb-4 text-1xl font-semibold tracking-tight text-heading">${cadenas.uno}</h5>
           <button 

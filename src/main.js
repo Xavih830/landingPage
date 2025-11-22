@@ -1,11 +1,11 @@
 "use strict";
 
-let listaBeneficios = [{uno: "Te ahorramos meses de trámites y rechazos", dos: "images/ahorro_tiempo.jpg"},
-  {uno: "El camión queda 100% a tu nombre", dos: "images/camion_nombre.jpg"},
-  {uno: "Pagas conforme avanza el trámite, no hay riesgo", dos: "images/riesgo_cero.jpg"},
-  {uno: "Compañía lista para operar en 30 días o menos", dos: "images/comp_30.jpg"},
-  {uno: "Permiso de operaciones garantizado en tu ciudad", dos: "images/permiso_ciudad.jpg"},
-  {uno: "No te haremos padecer de estrés, filas, ni te haremos perder tu tiempo", dos: "images/cero_estres.jpg"}
+let listaBeneficios = [{uno: "Te ahorramos meses de trámites y rechazos", dos: "public/assets/ahorro_tiempo.jpg"},
+  {uno: "El camión queda 100% a tu nombre", dos: "public/assets/camion_nombre.jpg"},
+  {uno: "Pagas conforme avanza el trámite, no hay riesgo", dos: "public/assets/riesgo_cero.jpg"},
+  {uno: "Compañía lista para operar en 30 días o menos", dos: "public/assets/comp_30.jpg"},
+  {uno: "Permiso de operaciones garantizado en tu ciudad", dos: "public/assets/permiso_ciudad.jpg"},
+  {uno: "No te haremos padecer de estrés, filas, ni te haremos perder tu tiempo", dos: "public/assets/cero_estres.jpg"}
 ];
 
 const barraLateral = () => {
@@ -30,12 +30,12 @@ const barraLateral = () => {
 const cargarBeneficios = () => {
   let card = document.getElementById("beneficios");
   card.innerHTML = "";
-  listaBeneficios.forEach(cadenas => {
+  listaBeneficios.forEach(cadena => {
     card.innerHTML += `
       <div class="bg-gray-900 m-1 block max-w-sm sm:max-w-[365px] lg:max-w-[245px] border border-2 rounded-xl shadow-xs">
-        <img class="w-full h-55 sm:w-100 sm:h-50 lg:w-75 lg:h-34 rounded-xl" src="${cadenas.dos}" alt="" />
+        <img class="w-full h-55 sm:w-100 sm:h-50 lg:w-75 lg:h-34 rounded-xl" src="${cadena.dos}" alt="" />
         <div class="p-6 text-center">
-          <h5 class="mb-4 text-1xl font-semibold tracking-tight text-heading">${cadenas.uno}</h5>
+          <h5 class="mb-4 text-1xl font-semibold tracking-tight text-heading">${cadena.uno}</h5>
           <button 
             class="inline-flex items-center text-white bg-brand box-border border rounded hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
             Ver más...

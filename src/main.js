@@ -1,11 +1,11 @@
 "use strict";
 
-let listaBeneficios = [{uno: "Te ahorramos meses de trámites y rechazos", dos: "public/assets/ahorro_tiempo.jpg"},
-  {uno: "El camión queda 100% a tu nombre", dos: "public/assets/camion_nombre.jpg"},
-  {uno: "Pagas conforme avanza el trámite, no hay riesgo", dos: "public/assets/riesgo_cero.jpg"},
-  {uno: "Compañía lista para operar en 30 días o menos", dos: "public/assets/comp_30.jpg"},
-  {uno: "Permiso de operaciones garantizado en tu ciudad", dos: "public/assets/permiso_ciudad.jpg"},
-  {uno: "No te haremos padecer de estrés, filas, ni te haremos perder tu tiempo", dos: "public/assets/cero_estres.jpg"}
+let listaBeneficios = [{uno: "Te ahorramos meses de trámites y rechazos", dos: "/assets/ahorro_tiempo.jpg"},
+  {uno: "El camión queda 100% a tu nombre", dos: "/assets/camion_nombre.jpg"},
+  {uno: "Pagas conforme avanza el trámite, no hay riesgo", dos: "/assets/riesgo_cero.jpg"},
+  {uno: "Compañía lista para operar en 30 días o menos", dos: "/assets/comp_30.jpg"},
+  {uno: "Permiso de operaciones garantizado en tu ciudad", dos: "/assets/permiso_ciudad.jpg"},
+  {uno: "No te haremos padecer de estrés, filas, ni te haremos perder tu tiempo", dos: "/assets/cero_estres.jpg"}
 ];
 
 const barraLateral = () => {

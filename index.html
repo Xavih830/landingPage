@@ -7,68 +7,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
-  <title>Abogados</title>
+  <title>Lavayen</title>
   <link rel="icon" href="favicon.ico">
   <link href="src/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <header class="relative bg-white shadow-xl ring-1 ring-gray-900/5">
-    <nav class="px-4 py-4 sm:flex sm:items-center sm:justify-between">
-      <section class="flex justify-between">
-        <img src="/assets/Lavayen.png" class="w-45" alt="Tailwind Play" />
-        <button id="barra-lateral" class="text-[#1B2B45] sm:hidden">
-          <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-            viewBox="0 0 50 50">
-            <path
-              d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z">
-            </path>
+  <div
+    class="bg-center bg-no-repeat bg-[url('/assets/transporte.png')] bg-cover min-h-screen bg-gray-400 bg-blend-multiply">
+    <header class="lg:px-[140px]">
+      <nav class="px-5 py-3 flex items-center justify-between md:px-16">
+        <img src="/assets/Lavayen.png" class="w-33 lg:w-50" alt="Logo Lavayen" />
+        <a id="comenzar" href="#evaluacion_fast_2"
+          class="bg-[#2747db] w-38 lg:w-50 px-4 py-[7px] lg:py-[12px] flex justify-between items-center rounded-sm font-bold text-[14px] lg:text-[17px]">Te
+          asesoramos
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-chevron-down-icon lucide-chevron-down">
+            <path d="m6 9 6 6 6-6" />
           </svg>
-        </button>
-      </section>
-      <div id="agregar-lateral" class="flex flex-col items-start mt-3 gap-2 sm:hidden">
-      </div>
-      <div class="hidden sm:flex sm:flex-row sm:m-0">
-        <button class="text-gray-600 hover:bg-gray-200 w-full px-2 rounded hover:text-gray-900">Inicio</button>
-        <button class="text-gray-600 hover:bg-gray-200 w-full px-2 rounded hover:text-gray-900">¿Por qué
-          nosotros?</button>
-        <button class="text-gray-600 hover:bg-gray-200 w-full px-2 rounded hover:text-gray-900">Evaluación
-          especializada</button>
-        <button class="text-gray-600 hover:bg-gray-200 w-full px-2 rounded hover:text-gray-900">Contáctanos</button>
-      </div>
-    </nav>
-  </header>
+        </a>
+      </nav>
+    </header>
 
-  <section
-    class="bg-center bg-no-repeat bg-[url('/assets/transporte.png')] bg-cover bg-dark bg-gray-500 bg-blend-multiply">
-    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-      <h1 class="mb-6 text-4xl font-bold tracking-tighter text-white md:text-5xl lg:text-6xl">Constituye tu Compañía de
-        Transporte y Obtén tu Permiso de Operaciones en 30 Días — Sin Trámites Complicados</h1>
-      <p class="mb-8 text-base font-normal text-white md:text-xl sm:px-16 lg:px-48">Gestionamos la aprobación del
-        nombre, escritura, registro, factibilidad y Permiso de Operaciones ante ANT y Superintendencia. Todo claro, en
-        partes y con tu camión a tu nombre.</p>
-      <div class="flex flex-col gap-2 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 md:space-x-4">
-        <button type="button"
-          class="inline-flex items-center justify-center text-white bg-brand hover:bg-brand-strong border rounded focus:ring-4 focus:ring-brand-medium shadow-xs font-medium rounded-base text-base px-5 py-3 focus:outline-none">
-          Evaluación gratuita
-        </button>
-        <button type="button"
-          class="text-body bg-neutral-secondary-medium border rounded border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none">Ver
-          más...</button>
+    <section id="evaluacion_fast" class="mb-25 lg:py-20 lg:mb-5">
+      <div class="text-center py-8">
+        <div class="lg:px-[400px]">
+          <h1 class="mb-3 px-6 text-4xl font-bold tracking-tighter text-white md:text-5xl lg:text-6xl">Constituimos tu
+            compañía y mucho más</h1>
+        </div>
+        <p class="mb-4 px-3 text-base font-normal lg:font-bold text-white md:text-xl">Lista en solo 30 días.
+          Empieza cuando quieras.</p>
+        <div class="lg:px-[430px]">
+          <p class="mb-5 px-8 text-base font-normal text-white">¿Quieres que un abogado te
+            asesore? Ingresa tu email para generar una asesoría gratuita o contactarte con nosotros.</p>
+        </div>
+        <form id="evaluacion1" class="flex flex-col items-center space-y-2 sm:justify-center">
+          <div class="flex gap-2 items-center">
+            <input type="email" placeholder="Email" required name="email" id="input_email"
+              class="cursor-pointer w-55 bg-black/48 text-gray-400 border rounded hover:ring-3 text-left font-medium px-4 py-3 lg:w-100">
+            <select id="tipo"
+              class="cursor-pointer w-20 bg-black/48 text-gray-400 border rounded hover:ring-3 text-left font-medium px-4 py-3">
+              <option class="bg-white text-black" value="" disabled selected>Tipo</option>
+              <option class="bg-white text-black" value="tipo1">F (Financiero)</option>
+              <option class="bg-white text-black" value="tipo2">D (Documentario)</option>
+            </select>
+          </div>
+          <textarea id="textarea_case"
+            placeholder="Describe tu caso... Nombre de tu empresa, el número de camiones, el tipo de carga, etc."
+            required
+            class="cursor-pointer w-76 h-36 bg-black/48 text-gray-400 border rounded hover:ring-3 text-left font-medium px-4 py-3 lg:w-121 lg:h-20"></textarea>
+          <button type="submit" id="comenzar1"
+            class="flex cursor-pointer justify-between items-center w-39 bg-[#2747db] rounded-sm hover:ring-3 font-bold text-[18px] px-[18px] py-[8px]">
+            Comenzar
+            <svg class="" xmlns="http://www.w3.org/2000/svg" width="30" height="34" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide font-bold lucide-chevron-right-icon lucide-chevron-right">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </form>
       </div>
+    </section>
+    <div class="lg:px-[110px]">
+      <h2 class="text-lg px-6 font-bold mb-4">¿Por qué somos tu mejor opción?</h2>
     </div>
+  </div>
+
+  <main id="ventaja_competitiva" class="mb-9 px-6 py-[-6] lg:px-[100px]">
+    <div id="beneficios" class="block mb-2 sm:flex sm:justify-center lg:px-[140px]"></div>
+  </main>
+
+  <section id="preguntas" class="px-7 mb-9">
+    <h2 class="text-lg font-bold mb-4 lg:px-[105px]">Preguntas frecuentes</h2>
+    <div id="contenedor-preguntas" class="flex flex-col lg:px-[105px]"></div>
   </section>
 
-  <main id="ventaja_competitiva">
-    <div class="bg-white mt-1 ml-1 mr-1 pr-10 pl-10 pt-7 pb-9 sm:p-16 lg:p-20 rounded-2xl">
-      <h2 class="text-center text-[#1B2B45] text-3xl font-bold tracking-tight text-heading md:text-4xl lg:text-5xl">¿Por
-        qué somos tu <mark class="px-2 pb-0.5 text-white bg-[#1B2B45] rounded"> mejor opción</mark> ?</h2>
+  <section id="datos" class="px-6 mb-15">
+    <h2 class="text-lg font-bold mb-4 lg:px-[105px]">Personas asesoradas</h2>
+    <div id="contenedor-datos" class="flex flex-col lg:px-[105px]"></div>
+  </section>
+
+  <section id="evaluacion_fast_2" class="mb-10">
+    <p class="mb-5 px-8 text-base font-normal text-white md:text-xl sm:px-16 lg:px-48">¿Quieres que un abogado te
+      asesore? Ingresa tu email para generar una asesoría gratuita o contactarte con nosotros.</p>
+    <form id="evaluacion2" class="flex flex-col px-8 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 md:space-x-4">
+      <div class="flex gap-2 items-center">
+        <input type="email" placeholder="Email" required name="email"
+          class="cursor-pointer w-55 bg-black/48 text-gray-400 border rounded hover:ring-3 text-left font-medium px-4 py-3">
+        <select id="tipo"
+          class="cursor-pointer w-20 bg-black/48 text-gray-400 border rounded hover:ring-3 text-left font-medium px-4 py-3">
+          <option class="bg-white text-black" value="" disabled selected>Tipo</option>
+          <option class="bg-white text-black" value="tipo1">F (Financiero)</option>
+          <option class="bg-white text-black" value="tipo2">D (Documentario)</option>
+        </select>
+      </div>
+      <textarea placeholder="Describe tu caso... Nombre de tu empresa, el número de camiones, el tipo de carga, etc."
+        rows="6" required
+        class="cursor-pointer w-76 bg-black/48 text-gray-400 border rounded hover:ring-3 text-left font-medium px-4 py-3"></textarea>
+      <button type="button"
+        class="flex cursor-pointer justify-between items-center w-39 bg-[#2747db] rounded-sm hover:ring-3 font-bold text-[18px] px-[18px] py-[8px]">
+        Comenzar
+        <svg class="" xmlns="http://www.w3.org/2000/svg" width="30" height="34" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide font-bold lucide-chevron-right-icon lucide-chevron-right">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </button>
+    </form>
+  </section>
+
+  <footer class="bg-neutral-primary-soft">
+    <div class="mx-auto w-full max-w-screen-xl p-4 lg:py-8">
+      <h2 class="text-center text-[#868686] mb-2 text-[16px] font-normal">¿Preguntas? Llama al <u>0981109741</u></h2>
+      <hr class="border-default text-[#868686] sm:mx-auto lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-[#868686] text-body sm:text-center">© 2025 <a href="https://flowbite.com/"
+            class="hover:underline text-[#868686]">Lavayen</a>. Todos los derechos reservados.
+        </span>
+        <div class="flex mt-4 sm:justify-center sm:mt-0">
+          <a href="https://www.linkedin.com/in/xavier-lavayen-camacho-7950a3354?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            class="text-body hover:text-heading">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="#868686" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-linkedin-icon lucide-linkedin">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect width="4" height="12" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            <span class="sr-only">Facebook page</span>
+          </a>
+        </div>
+      </div>
     </div>
-    <div id="beneficios" class="block mb-2 sm:flex sm:flex-wrap sm:justify-center">
-    </div>
-  </main>
+  </footer>
   <script src="src/main.js" type="module"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+  <script src="src/firebase.js" type="module"></script>
 </body>
 
 </html>

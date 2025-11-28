@@ -18,6 +18,24 @@ let listaPreguntas = [{ uno: "¿Qué es Lavayen?", dos: resp1 },
 { uno: "¿Qué incluye su servicio?", dos: resp4 }
 ];
 
+const barraLateral = () => {
+  let barra = document.getElementById("barra-lateral");
+  barra.addEventListener("click", () => {
+    let agregar = document.getElementById("agregar-lateral");
+    if (agregar.innerHTML == "") {
+      agregar.innerHTML = `
+      <button class="text-gray-600 bg-gray-200 mt-2 rounded-sm px-5 py-2">Inicio</button>
+      <button class="text-gray-600 bg-gray-200 rounded-sm px-5 py-2">¿Por qué nosotros?</button>
+      <button class="text-gray-600 bg-gray-200 rounded-sm px-5 py-2">Evaluación especializada</button>
+      <button class="text-gray-600 bg-gray-200 mb-2 rounded-sm px-5 py-2">Contáctanos</button>
+    `;
+    } else {
+      agregar.innerHTML = "";
+    }
+  });
+}
+
+
 const cargarPreguntas = () => {
   let contenedor = document.getElementById("contenedor-preguntas");
   contenedor.innerHTML = '';
@@ -67,22 +85,38 @@ const cargarBeneficios = () => {
 
 const enableForm = () => {
   const form = document.getElementById("evaluacion1");
-
+  const form2 = document.getElementById("evaluacion2");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // 1. LOS DATOS DEBEN LEERSE AQUÍ, DENTRO DEL EVENTO
     const tipo = document.getElementById("tipo").value;
     const correo = document.getElementById("input_email").value;
     const desc = document.getElementById("textarea_case").value;
 
-    // 2. LA FUNCIÓN ASÍNCRONA DEBE LLAMARSE AQUÍ
     saveForm(correo, tipo, desc)
-      .then(exito => console.log(exito.message)) // Resuelve la Promesa externa con éxito
-      .catch(fracaso => console.log(fracaso.message)); // Resuelve la Promesa externa con fracaso
+      .then(exito => {
+        console.log(exito.message);
+        window.location.reload();
+      })
+      .catch(fracaso => console.log(fracaso.message));
   });
-  // 3. No se ejecuta nada más fuera de este bloque hasta que ocurra el 'submit'
+
+  form2.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const tipo2 = document.getElementById("tipo2").value;
+    const correo2 = document.getElementById("input_email2").value;
+    const desc2 = document.getElementById("textarea_case2").value;
+
+    saveForm(correo2, tipo2, desc2)
+      .then(exito => {
+        console.log(exito.message);
+        window.location.reload();
+      })
+      .catch(fracaso => console.log(fracaso.message));
+
+  });
 
 };
 
@@ -120,7 +154,7 @@ const mostrarDb = () => {
     `;
     const cuerpoT = tabla.querySelector("tbody");
     const lista = Object.values(result.data);
-    
+
     lista.forEach(fila => {
       cuerpoT.innerHTML += `
         <tr>
@@ -135,7 +169,7 @@ const mostrarDb = () => {
   }).catch(e => {
     console.log(e.data);
   });
-  
+
   boton.addEventListener('click', () => {
     conten.classList.toggle("hidden");
     conten.classList.toggle("flex");
@@ -152,6 +186,7 @@ const mostrarDb = () => {
 }
 
 (() => {
+  barraLateral();
   mostrarDb();
   enableForm();
   cargarBeneficios();

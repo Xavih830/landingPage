@@ -16,17 +16,26 @@
   <div
     class="bg-center bg-no-repeat bg-[url('/assets/transporte.png')] bg-cover min-h-screen bg-gray-400 bg-blend-multiply">
     <header class="lg:px-[140px]">
-      <nav class="px-5 py-3 flex items-center justify-between md:px-16">
-        <img src="/assets/Lavayen.png" class="w-33 lg:w-50" alt="Logo Lavayen" />
-        <a id="comenzar" href="#evaluacion_fast_2"
-          class="bg-[#2747db] w-38 lg:w-50 px-4 py-[7px] lg:py-[12px] flex justify-between items-center rounded-sm font-bold text-[14px] lg:text-[17px]">Te
-          asesoramos
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-chevron-down-icon lucide-chevron-down">
-            <path d="m6 9 6 6 6-6" />
-          </svg>
-        </a>
+      <nav class="flex flex-col justify-between md:px-16">
+        <div class="px-5 py-3 flex justify-between items-center">
+          <img src="/assets/Lavayen.png" class="w-33 lg:w-50" alt="Logo Lavayen" />
+          <button id="barra-lateral" class="sm:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-menu-icon lucide-menu">
+              <path d="M4 5h16" />
+              <path d="M4 12h16" />
+              <path d="M4 19h16" />
+            </svg>
+          </button>
+          <div class="hidden sm:flex sm:flex-row sm:m-0">
+            <a href="#porque" class="text-gray-600 hover:bg-gray-200 w-full px-2 rounded hover:text-gray-900 text-center">¿Por qué nosotros?</a>
+            <a href="#preguntas" class="text-gray-600 hover:bg-gray-200 w-full px-2 rounded hover:text-gray-900 text-center">Preguntas frecuentes</a>
+            <a href="#evaluacion_fast_2" class="text-gray-600 hover:bg-gray-200 w-full px-2 rounded hover:text-gray-900 text-center">Te <br>asesoramos</a>
+            <a href="#mas" class="text-gray-600 hover:bg-gray-200 w-full px-2 rounded hover:text-gray-900 text-center">¿Más <br>preguntas?</a>
+          </div>
+        </div>
+        <div id="agregar-lateral" class="flex flex-col items-center mt-3 gap-2 sm:hidden"></div>
       </nav>
     </header>
 
@@ -70,7 +79,7 @@
       </div>
     </section>
     <div class="lg:px-[110px]">
-      <h2 class="text-lg px-6 font-bold mb-4">¿Por qué somos tu mejor opción?</h2>
+      <h2 id="porque" class="text-lg px-6 font-bold mb-4">¿Por qué somos tu mejor opción?</h2>
     </div>
   </div>
 
@@ -89,13 +98,13 @@
   </section>
 
   <section id="evaluacion_fast_2" class="mb-10">
-    <p class="mb-5 px-8 text-base font-normal text-white md:text-xl sm:px-16 lg:px-48">¿Quieres que un abogado te
+    <p class="mb-5 px-8 text-base font-normal text-white sm:px-16 lg:text-center">¿Quieres que un abogado te
       asesore? Ingresa tu email para generar una asesoría gratuita o contactarte con nosotros.</p>
-    <form id="evaluacion2" class="flex flex-col px-8 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 md:space-x-4">
+    <form id="evaluacion2" class="flex flex-col px-8 space-y-4 lg:items-center justify-center">
       <div class="flex gap-2 items-center">
-        <input type="email" placeholder="Email" required name="email"
+        <input id="input_email2" type="email" placeholder="Email" required name="email"
           class="cursor-pointer w-55 bg-black/48 text-gray-400 border rounded hover:ring-3 text-left font-medium px-4 py-3">
-        <select id="tipo"
+        <select id="tipo2"
           class="cursor-pointer w-20 bg-black/48 text-gray-400 border rounded hover:ring-3 text-left font-medium px-4 py-3">
           <option class="bg-white text-black" value="" disabled selected>Tipo</option>
           <option class="bg-white text-black" value="tipo1">F (Financiero)</option>
@@ -103,9 +112,9 @@
         </select>
       </div>
       <textarea placeholder="Describe tu caso... Nombre de tu empresa, el número de camiones, el tipo de carga, etc."
-        rows="6" required
+        rows="6" required id="textarea_case2"
         class="cursor-pointer w-76 bg-black/48 text-gray-400 border rounded hover:ring-3 text-left font-medium px-4 py-3"></textarea>
-      <button type="button"
+      <button id="comenzar2" type="submit"
         class="flex cursor-pointer justify-between items-center w-39 bg-[#2747db] rounded-sm hover:ring-3 font-bold text-[18px] px-[18px] py-[8px]">
         Comenzar
         <svg class="" xmlns="http://www.w3.org/2000/svg" width="30" height="34" viewBox="0 0 24 24" fill="none"
@@ -117,9 +126,11 @@
     </form>
   </section>
 
-  <footer class="bg-neutral-primary-soft">
+  <footer id="mas" class="bg-neutral-primary-soft">
     <div class="mx-auto w-full max-w-screen-xl p-4 lg:py-8">
-      <h2 class="text-center text-[#868686] mb-2 text-[16px] font-normal">¿Preguntas? Llama al <u>0981109741</u></h2>
+      <div class="lg:flex">
+        <h2 class="text-center text-[#868686] mb-2 text-[16px] font-normal">¿Preguntas? Llama al <u>0981109741</u></h2>
+      </div>
       <hr class="border-default text-[#868686] sm:mx-auto lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-between">
         <span class="text-sm text-[#868686] text-body sm:text-center">© 2025 <a href="https://flowbite.com/"
@@ -135,7 +146,7 @@
               <rect width="4" height="12" x="2" y="9" />
               <circle cx="4" cy="4" r="2" />
             </svg>
-            <span class="sr-only">Facebook page</span>
+            <span class="sr-only">Linkedin page</span>
           </a>
         </div>
       </div>
